@@ -7,8 +7,8 @@ export default function NavBar(){
 
             <div className="flex-grow flex justify-end gap-10 font-semibold">
             <Link href='/' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">Home</Link>
-            <Link href='/about' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">About</Link>
-            <Link href='/projects' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">Projects</Link>
+            <Link href='#about' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">About</Link>
+            <Link href='#projects' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">Projects</Link>
             </div>
         </nav>
     );

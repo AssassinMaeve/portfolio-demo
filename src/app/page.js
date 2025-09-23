@@ -53,7 +53,7 @@ export default function Home() {
 
       <div className="max-w text-black border-b border-gray-200 pt-15"></div>
       <div className="flex items-center justify-between px-20 pt-10">
-        <h6 className="text-4xl font-semibold">work.</h6>
+        <h6 className="text-4xl font-semibold" id="projects">work.</h6>
         <button className="px-3 py-2  transition duration-300 bg-gray-100 text-1xl hover:bg-black hover:text-white">
             Show More
         </button>
@@ -113,7 +113,7 @@ export default function Home() {
             </div>
         </section>
 
-        <div className="max-w text-black border-b border-gray-200 pt-15"></div>
+        <div className="max-w text-black border-b border-gray-200 pt-15" id="about"></div>
       <div className="flex items-center justify-between px-20 pt-10">
         <h6 className="text-4xl pt-15 pb-15 font-semibold">about.</h6>
         <button className="px-3 py-2  transition duration-300 bg-gray-100 text-1xl hover:bg-black hover:text-white">
