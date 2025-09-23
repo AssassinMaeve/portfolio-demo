@@ -9,7 +9,6 @@ export default function NavBar(){
             <Link href='/' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">Home</Link>
             <Link href='/about' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">About</Link>
             <Link href='/projects' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">Projects</Link>
-            <Link href='/contact' className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white">Contact</Link>
             </div>
         </nav>
     );
