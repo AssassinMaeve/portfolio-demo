@@ -1,6 +1,6 @@
 // This directive marks the component as a "Client Component", which is necessary
 // because it uses React hooks (useEffect, useRef, useState) that interact with the browser.
-"use in client";
+"use client";
 
 // We import three hooks from React:
 // - useEffect: To run side effects, like setting up an observer after the component renders.
@@ -21,6 +21,11 @@ export default function Footer() {
   // 3. Set up a side effect that runs once after the component mounts.
   // The empty array [] at the end tells React to only run this effect once.
   useEffect(() => {
+    // ** THE FIX IS HERE **
+    // We store the current value of the ref in a variable. This ensures that the cleanup
+    // function has a stable reference to the same element, preventing potential issues.
+    const footerElement = footerRef.current;
+
     // The IntersectionObserver is a browser API that efficiently watches for
     // when an element enters or leaves the screen (the "viewport").
     const observer = new IntersectionObserver(
@@ -36,14 +41,18 @@ export default function Footer() {
       { threshold: 0.2 }
     );
 
-    // We tell the observer to start watching our footer element.
-    // 'footerRef.current' is the actual <footer> DOM node. We check if it exists first.
-    if (footerRef.current) observer.observe(footerRef.current);
+    // We tell the observer to start watching our footer element, using our stable variable.
+    if (footerElement) {
+      observer.observe(footerElement);
+    }
 
     // This is the cleanup function. It runs when the component is unmounted.
     // It's important to stop observing to prevent memory leaks.
     return () => {
-      if (footerRef.current) observer.unobserve(footerRef.current);
+      // We use the same stable variable to unobserve the element.
+      if (footerElement) {
+        observer.unobserve(footerElement);
+      }
     };
   }, []); // The empty array ensures this effect only runs on mount and unmount.
 

@@ -26,9 +26,9 @@ export default function NavBar() {
     <nav className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-20 py-4 bg-white text-black border-b border-gray-200">
       {/* Logo Section */}
       {/* This Link component will navigate the user back to the homepage. */}
-      <a href="/" className="text-2xl font-bold">
+      <Link href="/" className="text-2xl font-bold">
         My Portfolio
-      </a>
+      </Link>
 
       {/* Desktop Menu */}
       {/* This div is hidden by default ("hidden") and only becomes a flex container ("md:flex") on medium-sized screens and larger. */}
