@@ -6,6 +6,7 @@
 // Import components that make up our page layout.
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Image from "next/image";
 
 // Import icons from the lucide-react library.
 import { Copy, Check } from "lucide-react";
@@ -100,40 +101,48 @@ export default function Home() {
           {/* Project 1 */}
           <div className="relative w-full h-80 overflow-hidden rounded-lg shadow-lg group">
             <Image
-              className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
+              // The 'fill' prop makes the image fill its parent div.
+              // Removed width/height and w-full/h-full classes as they are not needed with 'fill'.
+              className="object-cover transform transition duration-500 group-hover:scale-110"
               src="/images/image-1.jpg"
               alt="Project 1"
+              fill
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-50 transition duration-500">
               <h3 className="text-white text-2xl font-semibold">Project 1</h3>
             </div>
           </div>
-          {/* ... other projects ... */}
+          {/* Project 2 */}
           <div className="relative w-full h-80 overflow-hidden rounded-lg shadow-lg group">
             <Image
-              className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
+              className="object-cover transform transition duration-500 group-hover:scale-110"
               src="/images/image-2.jpg"
               alt="Project 2"
+              fill
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-50 transition duration-500">
               <h3 className="text-white text-2xl font-semibold">Project 2</h3>
             </div>
           </div>
+          {/* Project 3 */}
           <div className="relative w-full h-80 overflow-hidden rounded-lg shadow-lg group">
             <Image
-              className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
+              className="object-cover transform transition duration-500 group-hover:scale-110"
               src="/images/image-3.jpg"
               alt="Project 3"
+              fill
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-50 transition duration-500">
               <h3 className="text-white text-2xl font-semibold">Project 3</h3>
             </div>
           </div>
+          {/* Project 4 */}
           <div className="relative w-full h-80 overflow-hidden rounded-lg shadow-lg group">
             <Image
-              className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
+              className="object-cover transform transition duration-500 group-hover:scale-110"
               src="/images/image-4.jpg"
               alt="Project 4"
+              fill
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-50 transition duration-500">
               <h3 className="text-white text-2xl font-semibold">Project 4</h3>
@@ -168,9 +177,10 @@ export default function Home() {
           {/* Image */}
           <div className="relative w-48 h-48 lg:w-130 lg:h-100 overflow-hidden shadow-lg group rounded-lg">
             <Image
-              className="w-full h-full object-cover object-center lg:object-right transform transition duration-500 group-hover:scale-110"
+              className="object-cover object-center lg:object-right transform transition duration-500 group-hover:scale-110"
               src="/images/image-1.jpg"
               alt="Profile Picture"
+              fill
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-50 transition duration-500">
               <h3 className="text-white text-2xl font-semibold">
