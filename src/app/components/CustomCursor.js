@@ -9,19 +9,25 @@ export default function CustomCursor() {
     const mouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
+
+    // Define handlers so we can reference them for removal
+    const handleMouseEnter = () => setHovering(true);
+    const handleMouseLeave = () => setHovering(false);
+
     window.addEventListener("mousemove", mouseMove);
 
     const interactiveEls = document.querySelectorAll("a, button");
     interactiveEls.forEach((el) => {
-      el.addEventListener("mouseenter", () => setHovering(true));
-      el.addEventListener("mouseleave", () => setHovering(false));
+      el.addEventListener("mouseenter", handleMouseEnter);
+      el.addEventListener("mouseleave", handleMouseLeave);
     });
 
     return () => {
       window.removeEventListener("mousemove", mouseMove);
+      // Now we can correctly remove the listeners
       interactiveEls.forEach((el) => {
-        el.removeEventListener("mouseenter", () => setHovering(true));
-        el.removeEventListener("mouseleave", () => setHovering(false));
+        el.removeEventListener("mouseenter", handleMouseEnter);
+        el.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
   }, []);
