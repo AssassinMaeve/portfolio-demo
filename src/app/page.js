@@ -99,7 +99,7 @@ export default function Home() {
         <section className="mt-10 lg:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 px-6 lg:px-20">
           {/* Project 1 */}
           <div className="relative w-full h-80 overflow-hidden rounded-lg shadow-lg group">
-            <img
+            <Image
               className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
               src="/images/image-1.jpg"
               alt="Project 1"
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
           {/* ... other projects ... */}
           <div className="relative w-full h-80 overflow-hidden rounded-lg shadow-lg group">
-            <img
+            <Image
               className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
               src="/images/image-2.jpg"
               alt="Project 2"
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative w-full h-80 overflow-hidden rounded-lg shadow-lg group">
-            <img
+            <Image
               className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
               src="/images/image-3.jpg"
               alt="Project 3"
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative w-full h-80 overflow-hidden rounded-lg shadow-lg group">
-            <img
+            <Image
               className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
               src="/images/image-4.jpg"
               alt="Project 4"
@@ -167,7 +167,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start lg:ml-180 mb-20 lg:mb-40 gap-10 px-6 lg:px-0">
           {/* Image */}
           <div className="relative w-48 h-48 lg:w-130 lg:h-100 overflow-hidden shadow-lg group rounded-lg">
-            <img
+            <Image
               className="w-full h-full object-cover object-center lg:object-right transform transition duration-500 group-hover:scale-110"
               src="/images/image-1.jpg"
               alt="Profile Picture"
