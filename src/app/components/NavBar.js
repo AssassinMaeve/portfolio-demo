@@ -26,32 +26,32 @@ export default function NavBar() {
     <nav className="flex items-center justify-between px-6 md:px-20 py-4 bg-white text-black border-b border-gray-200">
       {/* Logo Section */}
       {/* This Link component will navigate the user back to the homepage. */}
-      <Link href="/" className="text-2xl font-bold">
+      <a href="/" className="text-2xl font-bold">
         My Portfolio
-      </Link>
+      </a>
 
       {/* Desktop Menu */}
       {/* This div is hidden by default ("hidden") and only becomes a flex container ("md:flex") on medium-sized screens and larger. */}
       {/* This is how we make the menu responsive: it only shows up on desktops. */}
       <div className="hidden md:flex gap-10 font-semibold">
-        <Link
+        <a
           href="/"
           className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white"
         >
           Home
-        </Link>
-        <Link
+        </a>
+        <a
           href="#about"
           className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white"
         >
           About
-        </Link>
-        <Link
+        </a>
+        <a
           href="#projects"
           className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white"
         >
           Projects
-        </Link>
+        </a>
       </div>
 
       {/* Mobile Menu Button (Hamburger Icon) */}

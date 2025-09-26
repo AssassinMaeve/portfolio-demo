@@ -1,25 +1,55 @@
+/* This line imports the entire Tailwind CSS framework into your project,
+   making all of its utility classes available for use. */
 @import "tailwindcss";
 
 
+/* This rule applies global styles to the entire page.
+ * - 'cursor: none;' hides the default system cursor, which is a necessary
+     first step when creating a custom cursor.
+ * - 'scroll-behavior: smooth;' enables a smooth scrolling animation when a user
+     clicks on an in-page anchor link (e.g., <a href="#projects">). */
 html, body {
   cursor: none;
+  scroll-behavior: smooth;
 }
 
+/* This is a helper utility class. Any element with this class will be
+   forcefully hidden. '!important' ensures this rule overrides any other
+   conflicting 'display' styles. This is useful for hiding the cursor
+   with JavaScript on mobile devices. */
+.cursor-hidden {
+  display: none !important;
+}
+
+/* The '@keyframes' rule is used to define a custom animation. We've named
+   this animation 'slow-ping'. It describes how an element should change
+   over the course of the animation's duration. */
 @keyframes slow-ping {
+  /* At the start of the animation (0%), the element is at its normal size
+     and is semi-transparent. */
   0% {
     transform: scale(1);
     opacity: 0.6;
   }
+  /* Halfway through, it has grown to 1.8 times its size and has faded more. */
   50% {
     transform: scale(1.8); /* bigger than default */
     opacity: 0.3;
   }
+  /* At the end, it reaches its maximum size (2x) and is fully transparent,
+     effectively disappearing. The result is a "ping" or "ripple" effect. */
   100% {
     transform: scale(2); /* max size */
     opacity: 0;
   }
 }
 
+/* This class applies the 'slow-ping' animation to any element it's added to. */
 .animate-slow-ping {
+  /* This is a shorthand for all the animation properties: */
+  /* - slow-ping: The name of the @keyframes animation to use. */
+  /* - 2s: The duration of one animation cycle is 2 seconds. */
+  /* - cubic-bezier(...): An easing function that makes the animation feel smoother. */
+  /* - infinite: The animation will loop forever. */
   animation: slow-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
