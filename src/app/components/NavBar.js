@@ -23,7 +23,7 @@ export default function NavBar() {
 
   // The 'return' statement contains the JSX (HTML-like code) that will be rendered.
   return (
-    <nav className="flex items-center justify-between px-6 md:px-20 py-4 bg-white text-black border-b border-gray-200">
+    <nav className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-20 py-4 bg-white text-black border-b border-gray-200">
       {/* Logo Section */}
       {/* This Link component will navigate the user back to the homepage. */}
       <a href="/" className="text-2xl font-bold">
@@ -34,24 +34,24 @@ export default function NavBar() {
       {/* This div is hidden by default ("hidden") and only becomes a flex container ("md:flex") on medium-sized screens and larger. */}
       {/* This is how we make the menu responsive: it only shows up on desktops. */}
       <div className="hidden md:flex gap-10 font-semibold">
-        <a
+        <Link
           href="/"
           className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white"
         >
           Home
-        </a>
-        <a
+        </Link>
+        <Link
           href="#about"
           className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white"
         >
           About
-        </a>
-        <a
+        </Link>
+        <Link
           href="#projects"
           className="px-3 py-2 rounded-lg transition duration-300 hover:bg-black hover:text-white"
         >
           Projects
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu Button (Hamburger Icon) */}
